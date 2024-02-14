@@ -97,3 +97,33 @@ h1,h2,h3,h4,h5,h6 {
 .hidden {
 	display: none!important;
 }
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.hero-container {
+    position: relative;
+}
+
+.hero-container img {
+    width: 100%;
+    height: auto;
+}
+
+.sign-in-sign-up-box {
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.8);
+	border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+}
+
+.sign-in-sign-up-box input,
+.sign-in-sign-up-box button {
+    margin-bottom: 10px;
+}
