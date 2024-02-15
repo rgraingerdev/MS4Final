@@ -42,8 +42,9 @@ INSTALLED_APPS = [
     "allauth.account",
     "allauth.socialaccount",
     "megashop",
-    "basket",
     "products",
+    "basket",
+
 ]
 
 MIDDLEWARE = [
@@ -87,8 +88,12 @@ WSGI_APPLICATION = "megashop.wsgi.application"
 
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": "arjzxetp",
+        "USER": "arjzxetp",
+        "PASSWORD": "4g_n2nEA4K95hRhMoR9S5JYx9fq7Gm2v",
+        "HOST": "trumpet.db.elephantsql.com",
+        "PORT": "",
     }
 }
 

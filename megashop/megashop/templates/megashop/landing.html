@@ -8,10 +8,8 @@
     </div>
     <img src="{% static 'images/island.png' %}" alt="Hero Image">
     <div class="sign-in-sign-up-box">
-        <!-- Your sign-in/sign-up form goes here -->
         <form method="post" action="{% url 'homepage' %}">
             {% csrf_token %}
-            <!-- Your form fields go here -->
             <input type="text" name="username" placeholder="Username">
             <input type="password" name="password" placeholder="Password">
             <button type="submit">Sign In</button>
