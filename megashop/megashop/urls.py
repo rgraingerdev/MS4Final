@@ -19,7 +19,7 @@ from django.contrib import admin
 from django.urls import path, include
 from .views import homepage
 from basket.views import basket
-from products.views import products, add_product
+from products.views import products, add_product,edit_product
 
 urlpatterns = [
     path("admin/", admin.site.urls),
@@ -27,6 +27,7 @@ urlpatterns = [
     path('', homepage, name='homepage'),
     path('basket', basket, name='basket'),
     path("products/", products, name='products'),
-    path("products/add_product/", add_product,  name='add_product')
+    path("products/add_product/", add_product,  name='add_product'),
+    path("products/<int:product_id>/edit/", edit_product,  name='edit_product')
 
 ]

@@ -1,0 +1,11 @@
+{% extends 'megashop/base.html %}
+{% block content %}
+<h2>Edit Product</h2>
+<form method="post" action="{% url 'edit_asset' asset.id %}">
+    {% csrf_token %}
+    {{ form.as_P }}
+    <button class="btn btn-primary" type="submit">Save</button>
+</form>
+<a href="{% url 'products' %}">Back to product list</a>
+{% endblock %}
+
