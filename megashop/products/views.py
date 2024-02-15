@@ -17,13 +17,23 @@ def add_product(request):
     return render(request, 'add_product.html', {'form': form})
 
 def edit_product(request, product_id):
-    product = get_object_or_404(product, id=product_id)
+    product = get_object_or_404(Product, id=product_id)
 
     if request.method == 'POST':
         form = EditProductForm(request.POST, instance=product)
         if form.is_valid():
-            return redirect('asset_list')
+            form.save()
+            return redirect('products')
     else:
         form = EditProductForm(instance=product)
         
-    return render(request, 'edit_asset.html', {'form':form, 'product':product})
+    return render(request, 'edit_product.html', {'form': form, 'product':product})
+
+def delete_product(request, product_id):
+    product = get_object_or_404(Product, id=product_id)
+
+    if request.method == 'POST':
+        product.delete()
+        return redirect('products')
+    
+    return render(request, 'delete_product.html', {'product':product})

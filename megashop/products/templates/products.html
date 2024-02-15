@@ -11,9 +11,14 @@
 					<hr>
 
 					<button class="btn btn-outline-secondary add-btn">Add to cart</button>
-					<a class="btn btn-outline-success" href="#">View</a>
+					<butoon class="btn btn-outline-success" href="#">View</button>
 					<h4 style="display:inline-block"><strong>{{ product.price }}</strong></h4>
 				</div>
+				<a class="btn btn-outline-secondary" href="{% url 'edit_product' product_id=product.id %}">Edit</a>
+				<form method="post" action="{% url 'delete_product' product_id=product.id %}" onsubmit="return confirm('are you sure you want to delete {{product.name}}?')">
+					{% csrf_token %}
+					<button class="btn btn-danger" type="submit">Delete</button>
+				</form>
 			</div>
 		{% endfor %}
 		<a href="{% url 'add_product' %}">Add Product</a>
