@@ -10,7 +10,11 @@
 					<h6><strong>{{ product.name }}</strong></h6>
 					<hr>
 
-					<button class="btn btn-outline-secondary add-btn">Add to cart</button>
+					<form method='post' action="{% url 'add_to_basket' product_id=product.id %}">
+						{% csrf_token %}
+						{{ form }}
+						<button type="submit" class="btn btn-outline-secondary add-btn">Add to cart</button>
+					</form>
 					<butoon class="btn btn-outline-success" href="#">View</button>
 					<h4 style="display:inline-block"><strong>{{ product.price }}</strong></h4>
 				</div>

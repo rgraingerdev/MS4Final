@@ -1,5 +1,5 @@
 body {
-	background-color: hsl(0, 0%, 98%);
+	background-color: skyblue;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -114,7 +114,7 @@ body {
 
 .sign-in-sign-up-box {
     position: absolute;
-    top: 75%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: rgba(255, 255, 255, 0.8);
@@ -127,3 +127,4 @@ body {
 .sign-in-sign-up-box button {
     margin-bottom: 10px;
 }
+
