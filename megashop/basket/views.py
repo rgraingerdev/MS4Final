@@ -6,7 +6,15 @@ from .forms import AddToBasketForm
 
 def basket(request):
     basket_items = BasketItem.objects.filter(user=request.user)
-    return render(request, 'basket.html', {'basket_items': basket_items})
+
+    for product in basket_items:
+        product.total_price = product.quantity * product.price
+
+    total_cost = sum(total_cost for product in basket_items)
+
+    total_products = sum(total_products for product in basket_items)
+
+    return render(request, 'basket.html', {'basket_items': basket_items, 'total_cost':total_cost})
 
 def add_to_basket(request, product_id):
     product = get_object_or_404(Product, pk=product_id)

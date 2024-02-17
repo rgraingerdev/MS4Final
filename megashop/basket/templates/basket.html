@@ -33,7 +33,7 @@
 				
 				{% for item in basket_items %}
 				<div class="cart-row">
-					<div style="flex:2"><img src="{{ static 'images/island.png' }}" alt="island" class="row-img"></div>
+					<div style="flex:2"><img src="{% static 'images/island.png' %}" alt="Island Image"></div>
 					<div style="flex:2"><p>{{ item.product.name }}</p></div>
 					<div style="flex:1">{{ item.product.price }}</div>
 					<div style="flex:1">
