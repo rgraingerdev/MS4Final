@@ -17,14 +17,15 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import path, include
-from .views import homepage, signup_view
+from .views import homepage
 from basket.views import basket, add_to_basket
 from products.views import products, add_product, edit_product, delete_product
+from accounts.views import CustomSignUpView
 
 urlpatterns = [
     path("admin/", admin.site.urls),
     path('accounts/', include('allauth.urls')),
-    path('sign-up/', signup_view, name='signup_view'),
+    path('accounts/sign-up/', CustomSignUpView.as_view(), name='signup_view'),
     path('', homepage, name='homepage'),
     path('basket', basket, name='basket'),
     path('basket/add_to_basket<int:product_id>/', add_to_basket, name='add_to_basket'),
