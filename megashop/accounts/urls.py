@@ -17,8 +17,9 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import path
-from .views import CustomSignUpView
+from .views import CustomSignUpView, profile
 
 urlpatterns = [
-    path('accounts/signup', CustomSignUpView.as_view(), name="signup_view")
+    path('accounts/signup/', CustomSignUpView.as_view(), name="signup_view"),
+    path('accounts/profile/', profile, name="profile"),
 ]

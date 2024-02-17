@@ -1,0 +1,10 @@
+{% extends 'megashop/base.html' %}
+{% block content %}
+    <h2>Your Profile</h2>
+    <form method="'post" action="{% url 'profile' %}">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button class="btn btn-primary" type="submit">Save Profile</button>
+    </form>
+
+{% endblock %}
