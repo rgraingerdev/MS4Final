@@ -7,14 +7,13 @@ from .forms import AddToBasketForm
 def basket(request):
     basket_items = BasketItem.objects.filter(user=request.user)
 
-    for product in basket_items:
-        product.total_price = product.quantity * product.price
+    for item in basket_items:
+        item.total_price = item.quantity * item.product.price
 
-    total_cost = sum(total_cost for product in basket_items)
+    total_cost = sum(item.total_price for item in basket_items)
+    total_products = sum(item.quantity for item in basket_items)
 
-    total_products = sum(total_products for product in basket_items)
-
-    return render(request, 'basket.html', {'basket_items': basket_items, 'total_cost':total_cost})
+    return render(request, 'basket.html', {'basket_items': basket_items, 'total_cost':total_cost, 'total_products': total_products})
 
 def add_to_basket(request, product_id):
     product = get_object_or_404(Product, pk=product_id)
@@ -22,7 +21,7 @@ def add_to_basket(request, product_id):
     if request.method == 'POST':
         form = AddToBasketForm(request.POST)
         if form.is_valid():
-            quantity = 1
+            quantity = form.cleaned_data['quantity']
             basket_item, created = BasketItem.objects.get_or_create(
                 user=request.user,
                 product=product
@@ -34,4 +33,8 @@ def add_to_basket(request, product_id):
     else:
         form = AddToBasketForm(initial={'product_id': product_id})
     
-    return render(request, 'add_to_basket.html', {'form': form})
+    return render(request, 'add_to_basket.html', {'form': form, 'product':product})
+
+def clear_basket(request):
+    BasketItem.objects.filter(user=request.user).delete()
+    return redirect('basket')

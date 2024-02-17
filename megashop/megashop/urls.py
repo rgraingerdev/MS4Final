@@ -18,7 +18,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from .views import homepage
-from basket.views import basket, add_to_basket
+from basket.views import basket, add_to_basket, clear_basket
 from products.views import products, add_product, edit_product, delete_product
 from accounts.views import CustomSignUpView, profile
 
@@ -30,6 +30,7 @@ urlpatterns = [
     path('', homepage, name='homepage'),
     path('basket', basket, name='basket'),
     path('basket/add_to_basket<int:product_id>/', add_to_basket, name='add_to_basket'),
+    path('basket/clear_basket', clear_basket, name='clear_basket'),
     path("products/", products, name='products'),
     path("products/add_product/", add_product,  name='add_product'),
     path("products/<int:product_id>/edit/", edit_product,  name='edit_product'),
