@@ -1,16 +1,22 @@
 {% extends 'megashop/base.html' %}
+{% load crispy_forms_tags %}
 {% block content %}
-    <h2>{{ product.product }}</h2>
-    <p>{{ product.price }}</p>
 
-    <form method="post" action="{% url 'checkout' product.id %}" id="payment-form">
+<ul>
+    {% for item in basket_items %}
+    <li>{{item.product.name }} - Quantity {{ item.quantity }} - Price: {{item.product.price }}</li>
+    {% endfor %}
+</ul>
+
+    <p>Total Cost: £{{total_cost}} </p>
+
+    <form method="post" action="{% url 'products' %}" id="payment-form">
         {% csrf_token %}
-
-        {{ form|crispy }}
-
+        {{ form.as_p }}
         <div id="card-element"></div>
         <div id="card-errors" role="alert"></div>
         <button id="submit-payment">Submit payment</button>
+        
     </form>
 
     <script src="https://js.stripe.com/v3"></script>

@@ -36,6 +36,6 @@ urlpatterns = [
     path("products/add_product/", add_product,  name='add_product'),
     path("products/<int:product_id>/edit/", edit_product,  name='edit_product'),
     path("products/<int:product_id>/delete_product/", delete_product,  name='delete_product'),
-    path('checkout/<int:basket_id>/', payment, name='payment')
+    path('checkout/', payment, name='payment')
 
 ]
