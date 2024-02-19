@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404, redirect
 from .models import BasketItem
 from products.models import Product
 from .forms import AddToBasketForm
+from django.contrib.auth.decorators import login_required
 
 
 def basket(request):
@@ -15,6 +16,7 @@ def basket(request):
 
     return render(request, 'basket.html', {'basket_items': basket_items, 'total_cost':total_cost, 'total_products': total_products})
 
+@login_required(login_url='account_login')
 def add_to_basket(request, product_id):
     product = get_object_or_404(Product, pk=product_id)
     

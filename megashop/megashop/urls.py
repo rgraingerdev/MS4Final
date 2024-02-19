@@ -20,6 +20,7 @@ from django.urls import path, include
 from .views import homepage
 from basket.views import basket, add_to_basket, clear_basket
 from products.views import products, add_product, edit_product, delete_product
+from checkout.views import payment
 from accounts.views import CustomSignUpView, profile
 
 urlpatterns = [
@@ -35,5 +36,6 @@ urlpatterns = [
     path("products/add_product/", add_product,  name='add_product'),
     path("products/<int:product_id>/edit/", edit_product,  name='edit_product'),
     path("products/<int:product_id>/delete_product/", delete_product,  name='delete_product'),
+    path('checkout/<int:basket_id>/', payment, name='payment')
 
 ]
