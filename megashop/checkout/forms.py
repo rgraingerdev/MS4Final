@@ -1,13 +1,39 @@
 from django import forms
-from crispy_forms.helper import FormHelper
-from crispy_forms.layout import Submit
-from products.models import Product
+from .models import Order
 
-class PaymentForm(forms.Form):
-    card_number = forms.CharField(label='Card Number', required=True)
-    expiration_date = forms.CharField(label='Expiration Date (MM/YY)', required=True)
-    cvc = forms.CharField(label='CVC', required=True)
 
-    stripeToken = forms.CharField(label='Stripe Token', required=True, widget=forms.HiddenInput())
-    helper = FormHelper()
-    helper.add_input(Submit('submit', 'Submit Payment'))
+class OrderForm(forms.ModelForm):
+    class Meta:
+        model = Order
+        fields = ('full_name', 'email', 'phone_number',
+                  'street_address1', 'street_address2',
+                  'town_or_city', 'postcode', 'country',
+                  'county',)
+
+    def __init__(self, *args, **kwargs):
+        """
+        Add placeholders and classes, remove auto-generated
+        labels and set autofocus on first field
+        """
+        super().__init__(*args, **kwargs)
+        placeholders = {
+            'full_name': 'Full Name',
+            'email': 'Email Address',
+            'phone_number': 'Phone Number',
+            'postcode': 'Postal Code',
+            'town_or_city': 'Town or City',
+            'street_address1': 'Street Address 1',
+            'street_address2': 'Street Address 2',
+            'county': 'County, State or Locality',
+        }
+
+        self.fields['full_name'].widget.attrs['autofocus'] = True
+        for field in self.fields:
+            if field != 'country':
+                if self.fields[field].required:
+                    placeholder = f'{placeholders[field]} *'
+                else:
+                    placeholder = placeholders[field]
+                self.fields[field].widget.attrs['placeholder'] = placeholder
+            self.fields[field].widget.attrs['class'] = 'stripe-style-input'
+            self.fields[field].label = False

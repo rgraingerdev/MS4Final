@@ -62,6 +62,8 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = "megashop.urls"
 
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
@@ -74,6 +76,10 @@ TEMPLATES = [
                 "django.contrib.auth.context_processors.auth",
                 "django.contrib.messages.context_processors.messages",
             ],
+            'builtins': [
+                'crispy_froms.templatetags.crispy_forms_tags',
+                'crispy_forms.templatetags.crispy_forms_field',
+            ]
         },
     },
 ]
@@ -163,4 +169,4 @@ SOCIALACCOUNT_PROVIDERS = {
 STRIPE_PUBLIC_KEY = 'pk_test_51OlWc4HBL7jJNBrf3ypNQKPpoSu5AGrdRlhsGVxYl4UeuvkM4YscCAdFb5kinRYrWpKCzr5BgS4o6ULeNpPFDzwB00TTz9CAVs'
 STRIPE_SECRET_KEY = 'sk_test_51OlWc4HBL7jJNBrfijU91BBY1BfqI2PJBFCnkHVQ6NAz97uWq5HiXFMFjH4l0sGAzP0qhvGB5hZ4h9mDv9dUOKqS00vLMH5ZZ9'
 
-CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
