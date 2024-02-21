@@ -17,25 +17,15 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import path, include
-from .views import homepage
-from basket.views import basket, add_to_basket, clear_basket
-from products.views import products, add_product, edit_product, delete_product
-from checkout.views import payment
-from profiles.views import CustomSignUpView, profile
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
-    path("admin/", admin.site.urls),
+    path('admin/', admin.site.urls),
     path('accounts/', include('allauth.urls')),
-    path('accounts/sign-up/', CustomSignUpView.as_view(), name='signup_view'),
-    path('accounts/profile/', profile, name='profile'),
-    path('', homepage, name='homepage'),
-    path('basket', basket, name='basket'),
-    path('basket/add_to_basket<int:product_id>/', add_to_basket, name='add_to_basket'),
-    path('basket/clear_basket', clear_basket, name='clear_basket'),
-    path("products/", products, name='products'),
-    path("products/add_product/", add_product,  name='add_product'),
-    path("products/<int:product_id>/edit/", edit_product,  name='edit_product'),
-    path("products/<int:product_id>/delete_product/", delete_product,  name='delete_product'),
-    path('checkout/', payment, name='payment')
-
+    path('', include('megashop.urls')),
+    path('products/', include('products.urls')),
+    path('bag/', include('bag.urls')),
+    path('checkout/', include('checkout.urls')),
+    path('profile/', include('profiles.urls')),
 ]

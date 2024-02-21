@@ -42,11 +42,11 @@ INSTALLED_APPS = [
     "allauth.socialaccount",
     "megashop",
     "products",
-    "basket",
-    "accounts",
+    "bag",
     "checkout",
+    "profiles",
     "crispy_forms",
-    "countries",
+    
 
 ]
 
@@ -77,10 +77,6 @@ TEMPLATES = [
                 "django.contrib.auth.context_processors.auth",
                 "django.contrib.messages.context_processors.messages",
             ],
-            'builtins': [
-                'crispy_froms.templatetags.crispy_forms_tags',
-                'crispy_forms.templatetags.crispy_forms_field',
-            ]
         },
     },
 ]

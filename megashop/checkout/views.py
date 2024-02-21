@@ -6,11 +6,10 @@ from django.conf import settings
 from .forms import OrderForm
 from .models import Order, OrderLineItem
 
-from django.shortcuts import render, redirect, get_object_or_404
-import stripe
-from .forms import OrderForm
-from basket.models import BasketItem
-from django.conf import settings
+from products.models import Product
+from profiles.models import UserProfile
+from profiles.forms import UserProfileForm
+from bag.contexts import bag_contents
 
 import stripe
 import json
