@@ -21,7 +21,7 @@ from .views import homepage
 from basket.views import basket, add_to_basket, clear_basket
 from products.views import products, add_product, edit_product, delete_product
 from checkout.views import payment
-from accounts.views import CustomSignUpView, profile
+from profiles.views import CustomSignUpView, profile
 
 urlpatterns = [
     path("admin/", admin.site.urls),
