@@ -19,10 +19,10 @@
         
     </form>
 
-    <script src="https://js.stripe.com/v3"></script>
+    <script src="https://js.stripe.com/v3/"></script>
 
     <script>
-        var stripe = Stripe('{{pk_test_51OlWc4HBL7jJNBrf3ypNQKPpoSu5AGrdRlhsGVxYl4UeuvkM4YscCAdFb5kinRYrWpKCzr5BgS4o6ULeNpPFDzwB00TTz9CAVs}}');
+        var stripe = Stripe('pk_test_51OlWc4HBL7jJNBrf3ypNQKPpoSu5AGrdRlhsGVxYl4UeuvkM4YscCAdFb5kinRYrWpKCzr5BgS4o6ULeNpPFDzwB00TTz9CAVs');
         var elements = stripe.elements();
 
         var card = elements.create('card');
