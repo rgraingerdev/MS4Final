@@ -1,19 +1,19 @@
-![Developer Friends](assets/images/Cardiff_City_Fanpage.png)
+![Megashop](assets/images/Cardiff_City_Fanpage.png)
 
-Welcome To the Developer Friends Page, The Developer friends and everything it stands for are the focus of this website. You can find upcoming events, recomendations and the classes.
+Welcome To the Megashop, The Megashop and everything it stands for are the focus of this website. You can Win prizes or dream holidays.
 
 ## Getting Started
 
-Visit https://developerfriends-847f79cf6af3.herokuapp.com/ on your preferred web browser to access the Developer friends Page. The website is completely responsive; regardless of whether you're using a desktop computer, tablet or smartphone, it should look excellent on all of them.
+Visit "placeholder"on your preferred web browser to access the Developer friends Page. The website is completely responsive; regardless of whether you're using a desktop computer, tablet or smartphone, it should look excellent on all of them.
 
 ## User Storys
 I have developed user stories to direct my design and development process; in order to make sure that the Developer friends Page satisfies the requirements of my users. Here are some usage examples for user stories:
 
 
 * As a developer i want a way to broaden my development skills.
-* I want to be able to see events.
-* I want to be able to contact somebody if i have questions.
-* I want to have access to the most recent Classes.
+* I want to be able to see current prizes.
+* I want to be able add things to my basket.
+* I want to be able to add and edit current stock.
 * I want to learn more about coding.
 * i want to be able to easily navigate the website.
 * I want to be able to view the webpage on mobile or tablet.
@@ -25,12 +25,12 @@ By developing user stories, I can make sure that the website satisfies user need
 
 * The aim is for a first-time user to be able to easily navigate.
 * The colour scheme was chosen to be easy on the eye and not draw attention away from content. 
-* This page was made so that both new and current members can enjoy all things code.
+* This page was made so that both new and current members can enjoy.
 
 ### Future features
 * Add a group messageboard for users to ask questions and disscuss together.
-* A rolling gallery of images of previous events.
-* Add examples and links to past members projects.
+* More categorys for the prizes.
+* Add examples and links to past winners page.
 
 ### Font
 
@@ -49,20 +49,20 @@ By developing user stories, I can make sure that the website satisfies user need
 * HTML - Was used for the structure of the page.
 * CSS - was used for the style of elements.
 * Python - Was used to add to create backend tables and interactivity.
+* Django - Was used as the main framework
 * SQLalchemy - used for creating tables to store user information.
 * ElephantSQL - Used to manage tables
 * Github - is the hosting site for storing the code and version control.
 * Heroku - was used to deploy the site.
 * balsamiq - used for wireframes.
 * Fontawesome - for icons on navbar.
-* google fonts - used for the Inter font.
 * Devtools - used for debugging and testing to ensure responsiveness.
 * Google chrome lighthouse - used for testing.
 * W3C HTML Validator - used for validating HTML of the page.
 * W3C CSS validator - used for validating CSS of the page.
 
 ## Testing
-The Developer Friends has undergone comprehensive testing to guarantee that it operates properly and offers a satisfying user experience. The website has been tested on a variety of hardware, browsers, and operating systems, including:
+The Megashop has undergone comprehensive testing to guarantee that it operates properly and offers a satisfying user experience. The website has been tested on a variety of hardware, browsers, and operating systems, including:
 
 Systems running Windows, macOS, and Linux.
 Web browsers such as Safari, Edge, Firefox and Chrome that can run on mobile and desktop.
@@ -76,9 +76,12 @@ Testing began with automated testing as per the table below with screenshots.
 
 |Test |Lighthouse| W3 html validator| W3 schools jigsaw| 
 |-----|-----|-----|-----|
-|home| Pass| Pass| Pass|
-|Timeline| Pass| Pass| Pass|
-|Contact| Pass| Pass| Pass|
+|Home| Pass| Pass| Pass|
+|Products| Pass| Pass| Pass|
+|Add product| Pass| Pass| Pass|
+|Edit product| Pass| Pass| Pass|
+|Payment| Pass| Pass| Pass|
+|My Details| Pass| Pass| Pass|
 |Sign in| Pass | Pass| Pass|
 
 ![Home](project/static/images/validator_home.png)  
@@ -189,7 +192,7 @@ To develop this repository locally, you will need to do the following:
     - This can be done by using `source venv/bin/activate` in the terminal.
 6. Install program requirements.
     - This can be done by using `pip install -r requirements.txt` in the terminal.
-7. Create a `.gitignore` file and add `env.py` to it.
+7. Create a `.gitignore` file and add `env.py`.
 8. Create the env.py file in the root of your project directory.
 9. Add the following to env.py
 
