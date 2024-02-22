@@ -23,3 +23,6 @@ class UserProfileForm(forms.ModelForm):
             'default_postcode': 'Post Code',
             'default_country': 'Country',
         }
+        widgets = {
+            'default_country': forms.Select(),
+        }
