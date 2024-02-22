@@ -1,0 +1,802 @@
+[
+  {
+    "pk": 1,
+    "model": "products.category",
+    "fields": {
+      "name": "Veal - Eye Of Round",
+      "friendly_name": "Garbag Bags - Black"
+    }
+  },
+  {
+    "pk": 2,
+    "model": "products.category",
+    "fields": {
+      "name": "Cheese - Le Cheve Noir",
+      "friendly_name": "Dc - Frozen Momji"
+    }
+  },
+  {
+    "pk": 3,
+    "model": "products.category",
+    "fields": {
+      "name": "Duck - Fat",
+      "friendly_name": "Wine - Chateauneuf Du Pape"
+    }
+  },
+  {
+    "pk": 4,
+    "model": "products.category",
+    "fields": {
+      "name": "Crab - Claws, Snow 16 - 24",
+      "friendly_name": "Chicken Thigh - Bone Out"
+    }
+  },
+  {
+    "pk": 5,
+    "model": "products.category",
+    "fields": {
+      "name": "Veal - Insides, Grains",
+      "friendly_name": "Wine - Penfolds Koonuga Hill"
+    }
+  },
+  {
+    "pk": 6,
+    "model": "products.category",
+    "fields": {
+      "name": "Longos - Lasagna Beef",
+      "friendly_name": "Squash - Pattypan, Yellow"
+    }
+  },
+  {
+    "pk": 7,
+    "model": "products.category",
+    "fields": {
+      "name": "Food Colouring - Green",
+      "friendly_name": "Coriander - Seed"
+    }
+  },
+  {
+    "pk": 8,
+    "model": "products.category",
+    "fields": {
+      "name": "Broom Handle",
+      "friendly_name": "Beef - Rib Eye Aaa"
+    }
+  },
+  {
+    "pk": 9,
+    "model": "products.category",
+    "fields": {
+      "name": "Thermometer Digital",
+      "friendly_name": "Jolt Cola - Red Eye"
+    }
+  },
+  {
+    "pk": 10,
+    "model": "products.category",
+    "fields": {
+      "name": "Lettuce - Spring Mix",
+      "friendly_name": "Fennel"
+    }
+  },
+  {
+    "pk": 11,
+    "model": "products.category",
+    "fields": {
+      "name": "Carbonated Water - Strawberry",
+      "friendly_name": "Wine - Red, Lurton Merlot De"
+    }
+  },
+  {
+    "pk": 12,
+    "model": "products.category",
+    "fields": {
+      "name": "Muffin Mix - Banana Nut",
+      "friendly_name": "Trout - Hot Smkd, Dbl Fillet"
+    }
+  },
+  {
+    "pk": 13,
+    "model": "products.category",
+    "fields": {
+      "name": "Thyme - Lemon, Fresh",
+      "friendly_name": "Shallots"
+    }
+  },
+  {
+    "pk": 14,
+    "model": "products.category",
+    "fields": {
+      "name": "Easy Off Oven Cleaner",
+      "friendly_name": "Syrup - Monin, Irish Cream"
+    }
+  },
+  {
+    "pk": 15,
+    "model": "products.category",
+    "fields": {
+      "name": "Soupcontfoam16oz 116con",
+      "friendly_name": "Celery"
+    }
+  },
+  {
+    "pk": 16,
+    "model": "products.category",
+    "fields": {
+      "name": "Longos - Cheese Tortellini",
+      "friendly_name": "Muffin Mix - Lemon Cranberry"
+    }
+  },
+  {
+    "pk": 17,
+    "model": "products.category",
+    "fields": {
+      "name": "Chicken Thigh - Bone Out",
+      "friendly_name": "Kirsch - Schloss"
+    }
+  },
+  {
+    "pk": 18,
+    "model": "products.category",
+    "fields": {
+      "name": "Sauce - Black Current, Dry Mix",
+      "friendly_name": "Wine - Tio Pepe Sherry Fino"
+    }
+  },
+  {
+    "pk": 19,
+    "model": "products.category",
+    "fields": {
+      "name": "Wine - Pinot Noir Latour",
+      "friendly_name": "Cranberries - Frozen"
+    }
+  },
+  {
+    "pk": 20,
+    "model": "products.category",
+    "fields": {
+      "name": "Napkin Colour",
+      "friendly_name": "Cheese - Grana Padano"
+    }
+  },
+  {
+    "pk": 21,
+    "model": "products.category",
+    "fields": {
+      "name": "Cheese - Provolone",
+      "friendly_name": "Tomatoes Tear Drop"
+    }
+  },
+  {
+    "pk": 22,
+    "model": "products.category",
+    "fields": {
+      "name": "Pepper - Black, Ground",
+      "friendly_name": "Papayas"
+    }
+  },
+  {
+    "pk": 23,
+    "model": "products.category",
+    "fields": {
+      "name": "Wine - Vidal Icewine Magnotta",
+      "friendly_name": "Cup - Translucent 7 Oz Clear"
+    }
+  },
+  {
+    "pk": 24,
+    "model": "products.category",
+    "fields": {
+      "name": "Veal - Inside, Choice",
+      "friendly_name": "Sprite - 355 Ml"
+    }
+  },
+  {
+    "pk": 25,
+    "model": "products.category",
+    "fields": {
+      "name": "Syrup - Monin - Passion Fruit",
+      "friendly_name": "Pate - Liver"
+    }
+  },
+  {
+    "pk": 26,
+    "model": "products.category",
+    "fields": {
+      "name": "Coffee - Ristretto Coffee Capsule",
+      "friendly_name": "Wine - Merlot Vina Carmen"
+    }
+  },
+  {
+    "pk": 27,
+    "model": "products.category",
+    "fields": {
+      "name": "Salt - Kosher",
+      "friendly_name": "Water - Spring Water 500ml"
+    }
+  },
+  {
+    "pk": 28,
+    "model": "products.category",
+    "fields": {
+      "name": "Muffin Mix - Banana Nut",
+      "friendly_name": "Lettuce - California Mix"
+    }
+  },
+  {
+    "pk": 29,
+    "model": "products.category",
+    "fields": {
+      "name": "Soup - French Onion",
+      "friendly_name": "Soup - Campbellschix Stew"
+    }
+  },
+  {
+    "pk": 30,
+    "model": "products.category",
+    "fields": {
+      "name": "Aromat Spice / Seasoning",
+      "friendly_name": "Nut - Walnut, Pieces"
+    }
+  },
+  {
+    "pk": 31,
+    "model": "products.category",
+    "fields": {
+      "name": "Butter - Pod",
+      "friendly_name": "Cookie Trail Mix"
+    }
+  },
+  {
+    "pk": 32,
+    "model": "products.category",
+    "fields": {
+      "name": "Sauce Bbq Smokey",
+      "friendly_name": "Wine - Domaine Boyar Royal"
+    }
+  },
+  {
+    "pk": 33,
+    "model": "products.category",
+    "fields": {
+      "name": "Beef - Bones, Marrow",
+      "friendly_name": "Worcestershire Sauce"
+    }
+  },
+  {
+    "pk": 34,
+    "model": "products.category",
+    "fields": {
+      "name": "Chocolate - Milk, Callets",
+      "friendly_name": "Shrimp - 150 - 250"
+    }
+  },
+  {
+    "pk": 35,
+    "model": "products.category",
+    "fields": {
+      "name": "Clams - Bay",
+      "friendly_name": "Vermouth - Sweet, Cinzano"
+    }
+  },
+  {
+    "pk": 36,
+    "model": "products.category",
+    "fields": {
+      "name": "Beef - Tongue, Fresh",
+      "friendly_name": "Bread - Sticks, Thin, Plain"
+    }
+  },
+  {
+    "pk": 37,
+    "model": "products.category",
+    "fields": {
+      "name": "Cup Translucent 9 Oz",
+      "friendly_name": "Beef - Cooked, Corned"
+    }
+  },
+  {
+    "pk": 38,
+    "model": "products.category",
+    "fields": {
+      "name": "Sprite, Diet - 355ml",
+      "friendly_name": "Ecolab Crystal Fusion"
+    }
+  },
+  {
+    "pk": 39,
+    "model": "products.category",
+    "fields": {
+      "name": "Red Currants",
+      "friendly_name": "Pork - Sausage, Medium"
+    }
+  },
+  {
+    "pk": 40,
+    "model": "products.category",
+    "fields": {
+      "name": "Nantucket Apple Juice",
+      "friendly_name": "Wine - Chianti Classico Riserva"
+    }
+  },
+  {
+    "pk": 41,
+    "model": "products.category",
+    "fields": {
+      "name": "Turkey - Whole, Fresh",
+      "friendly_name": "Nantucket Orange Juice"
+    }
+  },
+  {
+    "pk": 42,
+    "model": "products.category",
+    "fields": {
+      "name": "Nantucket Cranberry Juice",
+      "friendly_name": "Squid U5 - Thailand"
+    }
+  },
+  {
+    "pk": 43,
+    "model": "products.category",
+    "fields": {
+      "name": "Carroway Seed",
+      "friendly_name": "Bread - Assorted Rolls"
+    }
+  },
+  {
+    "pk": 44,
+    "model": "products.category",
+    "fields": {
+      "name": "Artichoke - Bottom, Canned",
+      "friendly_name": "Lentils - Green Le Puy"
+    }
+  },
+  {
+    "pk": 45,
+    "model": "products.category",
+    "fields": {
+      "name": "Veal - Osso Bucco",
+      "friendly_name": "Mushroom - Morels, Dry"
+    }
+  },
+  {
+    "pk": 46,
+    "model": "products.category",
+    "fields": {
+      "name": "Cucumber - Pickling Ontario",
+      "friendly_name": "Energy Drink"
+    }
+  },
+  {
+    "pk": 47,
+    "model": "products.category",
+    "fields": {
+      "name": "Quinoa",
+      "friendly_name": "Blue Curacao - Marie Brizard"
+    }
+  },
+  {
+    "pk": 48,
+    "model": "products.category",
+    "fields": {
+      "name": "Wine - Pinot Noir Pond Haddock",
+      "friendly_name": "Crab - Dungeness, Whole, live"
+    }
+  },
+  {
+    "pk": 49,
+    "model": "products.category",
+    "fields": {
+      "name": "Food Colouring - Green",
+      "friendly_name": "Shark - Loin"
+    }
+  },
+  {
+    "pk": 50,
+    "model": "products.category",
+    "fields": {
+      "name": "Bagel - Everything",
+      "friendly_name": "Cranberries - Fresh"
+    }
+  },
+  {
+    "pk": 51,
+    "model": "products.category",
+    "fields": {
+      "name": "True - Vue Containers",
+      "friendly_name": "Creamers - 10%"
+    }
+  },
+  {
+    "pk": 52,
+    "model": "products.category",
+    "fields": {
+      "name": "Kiwi Gold Zespri",
+      "friendly_name": "Beer - Sleemans Cream Ale"
+    }
+  },
+  {
+    "pk": 53,
+    "model": "products.category",
+    "fields": {
+      "name": "Basil - Fresh",
+      "friendly_name": "Grapes - Red"
+    }
+  },
+  {
+    "pk": 54,
+    "model": "products.category",
+    "fields": {
+      "name": "Rum - Coconut, Malibu",
+      "friendly_name": "Wine - Red, Colio Cabernet"
+    }
+  },
+  {
+    "pk": 55,
+    "model": "products.category",
+    "fields": {
+      "name": "Bar Mix - Lime",
+      "friendly_name": "Cheese - Woolwich Goat, Log"
+    }
+  },
+  {
+    "pk": 56,
+    "model": "products.category",
+    "fields": {
+      "name": "Wine - White Cab Sauv.on",
+      "friendly_name": "Beer - Heinekin"
+    }
+  },
+  {
+    "pk": 57,
+    "model": "products.category",
+    "fields": {
+      "name": "Wine - Fontanafredda Barolo",
+      "friendly_name": "Tart Shells - Barquettes, Savory"
+    }
+  },
+  {
+    "pk": 58,
+    "model": "products.category",
+    "fields": {
+      "name": "Wine - Red, Wolf Blass, Yellow",
+      "friendly_name": "Cabbage - Nappa"
+    }
+  },
+  {
+    "pk": 59,
+    "model": "products.category",
+    "fields": {
+      "name": "Tea - Herbal Sweet Dreams",
+      "friendly_name": "Milk - 2% 250 Ml"
+    }
+  },
+  {
+    "pk": 60,
+    "model": "products.category",
+    "fields": {
+      "name": "Cognac - Courvaisier",
+      "friendly_name": "Pasta - Fusili Tri - Coloured"
+    }
+  },
+  {
+    "pk": 61,
+    "model": "products.category",
+    "fields": {
+      "name": "Lemonade - Natural, 591 Ml",
+      "friendly_name": "Corn Kernels - Frozen"
+    }
+  },
+  {
+    "pk": 62,
+    "model": "products.category",
+    "fields": {
+      "name": "Butter - Salted, Micro",
+      "friendly_name": "Vodka - Hot, Lnferno"
+    }
+  },
+  {
+    "pk": 63,
+    "model": "products.category",
+    "fields": {
+      "name": "Lamb - Shanks",
+      "friendly_name": "Pastry - Mini French Pastries"
+    }
+  },
+  {
+    "pk": 64,
+    "model": "products.category",
+    "fields": {
+      "name": "Wine - Balbach Riverside",
+      "friendly_name": "Cookie - Dough Variety"
+    }
+  },
+  {
+    "pk": 65,
+    "model": "products.category",
+    "fields": {
+      "name": "Appetizer - Crab And Brie",
+      "friendly_name": "7up Diet, 355 Ml"
+    }
+  },
+  {
+    "pk": 66,
+    "model": "products.category",
+    "fields": {
+      "name": "Chinese Foods - Chicken",
+      "friendly_name": "Beer - Labatt Blue"
+    }
+  },
+  {
+    "pk": 67,
+    "model": "products.category",
+    "fields": {
+      "name": "Bread - Bistro Sour",
+      "friendly_name": "Cream Of Tartar"
+    }
+  },
+  {
+    "pk": 68,
+    "model": "products.category",
+    "fields": {
+      "name": "Pork - Liver",
+      "friendly_name": "Cookies - Englishbay Chochip"
+    }
+  },
+  {
+    "pk": 69,
+    "model": "products.category",
+    "fields": {
+      "name": "V8 Splash Strawberry Banana",
+      "friendly_name": "Oil - Shortening,liqud, Fry"
+    }
+  },
+  {
+    "pk": 70,
+    "model": "products.category",
+    "fields": {
+      "name": "Bar Bran Honey Nut",
+      "friendly_name": "Flour - All Purpose"
+    }
+  },
+  {
+    "pk": 71,
+    "model": "products.category",
+    "fields": {
+      "name": "Straws - Cocktale",
+      "friendly_name": "Carbonated Water - Strawberry"
+    }
+  },
+  {
+    "pk": 72,
+    "model": "products.category",
+    "fields": {
+      "name": "Magnotta - Bel Paese White",
+      "friendly_name": "Sambuca - Opal Nera"
+    }
+  },
+  {
+    "pk": 73,
+    "model": "products.category",
+    "fields": {
+      "name": "Rum - Spiced, Captain Morgan",
+      "friendly_name": "Wine - White, Riesling, Henry Of"
+    }
+  },
+  {
+    "pk": 74,
+    "model": "products.category",
+    "fields": {
+      "name": "Chips - Potato Jalapeno",
+      "friendly_name": "Chives - Fresh"
+    }
+  },
+  {
+    "pk": 75,
+    "model": "products.category",
+    "fields": {
+      "name": "Wine - Taylors Reserve",
+      "friendly_name": "Mushrooms - Black, Dried"
+    }
+  },
+  {
+    "pk": 76,
+    "model": "products.category",
+    "fields": {
+      "name": "Nectarines",
+      "friendly_name": "Nantucket - Pomegranate Pear"
+    }
+  },
+  {
+    "pk": 77,
+    "model": "products.category",
+    "fields": {
+      "name": "Mayonnaise",
+      "friendly_name": "Bread - Raisin Walnut Pull"
+    }
+  },
+  {
+    "pk": 78,
+    "model": "products.category",
+    "fields": {
+      "name": "Sword Pick Asst",
+      "friendly_name": "Lettuce - Green Leaf"
+    }
+  },
+  {
+    "pk": 79,
+    "model": "products.category",
+    "fields": {
+      "name": "Marsala - Sperone, Fine, D.o.c.",
+      "friendly_name": "Petit Baguette"
+    }
+  },
+  {
+    "pk": 80,
+    "model": "products.category",
+    "fields": {
+      "name": "Apples - Sliced / Wedge",
+      "friendly_name": "Beer - Muskoka Cream Ale"
+    }
+  },
+  {
+    "pk": 81,
+    "model": "products.category",
+    "fields": {
+      "name": "Green Tea Refresher",
+      "friendly_name": "Cod - Fillets"
+    }
+  },
+  {
+    "pk": 82,
+    "model": "products.category",
+    "fields": {
+      "name": "Sage - Ground",
+      "friendly_name": "Mushroom - Lg - Cello"
+    }
+  },
+  {
+    "pk": 83,
+    "model": "products.category",
+    "fields": {
+      "name": "Lobster - Canned Premium",
+      "friendly_name": "Salmon - Atlantic, Fresh, Whole"
+    }
+  },
+  {
+    "pk": 84,
+    "model": "products.category",
+    "fields": {
+      "name": "Flour - Fast / Rapid",
+      "friendly_name": "Sambuca - Ramazzotti"
+    }
+  },
+  {
+    "pk": 85,
+    "model": "products.category",
+    "fields": {
+      "name": "Maintenance Removal Charge",
+      "friendly_name": "Soup - Cream Of Broccoli"
+    }
+  },
+  {
+    "pk": 86,
+    "model": "products.category",
+    "fields": {
+      "name": "Sugar - Invert",
+      "friendly_name": "Steampan - Foil"
+    }
+  },
+  {
+    "pk": 87,
+    "model": "products.category",
+    "fields": {
+      "name": "Cabbage - Red",
+      "friendly_name": "Turkey - Whole, Fresh"
+    }
+  },
+  {
+    "pk": 88,
+    "model": "products.category",
+    "fields": {
+      "name": "Sour Cream",
+      "friendly_name": "Bread - Roll, Soft White Round"
+    }
+  },
+  {
+    "pk": 89,
+    "model": "products.category",
+    "fields": {
+      "name": "Mustard - Dry, Powder",
+      "friendly_name": "Plaintain"
+    }
+  },
+  {
+    "pk": 90,
+    "model": "products.category",
+    "fields": {
+      "name": "Beer - Alexander Kieths, Pale Ale",
+      "friendly_name": "Spice - Greek 1 Step"
+    }
+  },
+  {
+    "pk": 91,
+    "model": "products.category",
+    "fields": {
+      "name": "Beer - Upper Canada Lager",
+      "friendly_name": "Bread - Multigrain"
+    }
+  },
+  {
+    "pk": 92,
+    "model": "products.category",
+    "fields": {
+      "name": "Pepper - Yellow Bell",
+      "friendly_name": "Muskox - French Rack"
+    }
+  },
+  {
+    "pk": 93,
+    "model": "products.category",
+    "fields": {
+      "name": "Wine - Chardonnay South",
+      "friendly_name": "Apple - Delicious, Golden"
+    }
+  },
+  {
+    "pk": 94,
+    "model": "products.category",
+    "fields": {
+      "name": "Napkin Colour",
+      "friendly_name": "The Pop Shoppe - Black Cherry"
+    }
+  },
+  {
+    "pk": 95,
+    "model": "products.category",
+    "fields": {
+      "name": "Beans - Turtle, Black, Dry",
+      "friendly_name": "Doilies - 12, Paper"
+    }
+  },
+  {
+    "pk": 96,
+    "model": "products.category",
+    "fields": {
+      "name": "Yukon Jack",
+      "friendly_name": "Wine - Pinot Noir Stoneleigh"
+    }
+  },
+  {
+    "pk": 97,
+    "model": "products.category",
+    "fields": {
+      "name": "Cod - Fillets",
+      "friendly_name": "Edible Flower - Mixed"
+    }
+  },
+  {
+    "pk": 98,
+    "model": "products.category",
+    "fields": {
+      "name": "Corn Shoots",
+      "friendly_name": "Cookie Chocolate Chip With"
+    }
+  },
+  {
+    "pk": 99,
+    "model": "products.category",
+    "fields": {
+      "name": "Slt - Individual Portions",
+      "friendly_name": "Dill Weed - Dry"
+    }
+  },
+  {
+    "pk": 100,
+    "model": "products.category",
+    "fields": {
+      "name": "Shiro Miso",
+      "friendly_name": "Sword Pick Asst"
+    }
+  }
+]
