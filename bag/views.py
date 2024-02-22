@@ -15,13 +15,13 @@ def add_to_bag(request, product_id):
     if request.method == 'POST':
         form = AddToBagForm(request.POST)
         if form.is_valid():
-            quantity = form.cleaned_data['quantity']
+            quantity = form.cleaned_data.get('quantity', 1)
 
             bag = request.session.get('bag', {})
             bag[product_id] = bag.get(product_id, 0) + quantity
             request.session['bag'] = bag
 
-            return redirect('product_list')
+            return redirect('products')
     
     form = AddToBagForm()
     context = {
