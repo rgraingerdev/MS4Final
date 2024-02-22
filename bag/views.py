@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect, reverse, HttpResponse, get_object_or_404
 from django.contrib import messages
+from .forms import AddToBagForm
 
 from products.models import Product
 
@@ -8,37 +9,27 @@ from products.models import Product
 def view_bag(request):
     return render(request, 'bag/bag.html')
 
-def add_to_bag(request, item_id):
+def add_to_bag(request, product_id):
+    product = Product.objects.get(id = product_id)
 
-    product = get_object_or_404(Product, pk=item_id)
-    quantity = int(request.POST.get('quantity'))
-    redirect_url = request.POST.get('redirect_url')
-    size = None
-    if 'product_size' in request.POST:
-        size = request.POST['product_size']
-    bag = request.session.get('bag', {})
+    if request.method == 'POST':
+        form = AddToBagForm(request.POST)
+        if form.is_valid():
+            quantity = form.cleaned_data['quantity']
 
-    if size:
-        if item_id in list(bag.keys()):
-            if size in bag[item_id]['items_by_size'].keys():
-                bag[item_id]['items_by_size'][size] += quantity
-                messages.success(request, f'Updated size {size.upper()} {product.name} quantity to {bag[item_id]["items_by_size"][size]}')
-            else:
-                bag[item_id]['items_by_size'][size] = quantity
-                messages.success(request, f'Added size {size.upper()} {product.name} to your bag')
-        else:
-            bag[item_id] = {'items_by_size': {size: quantity}}
-            messages.success(request, f'Added size {size.upper()} {product.name} to your bag')
-    else:
-        if item_id in list(bag.keys()):
-            bag[item_id] += quantity
-            messages.success(request, f'Updated {product.name} quantity to {bag[item_id]}')
-        else:
-            bag[item_id] = quantity
-            messages.success(request, f'Added {product.name} to your bag')
+            bag = request.session.get('bag', {})
+            bag[product_id] = bag.get(product_id, 0) + quantity
+            request.session['bag'] = bag
 
-    request.session['bag'] = bag
-    return redirect(redirect_url)
+            return redirect('product_list')
+    
+    form = AddToBagForm()
+    context = {
+        'product': product,
+        'form': form,
+    }
+    return render(request, 'bag/add_to_bag.html', context)
+
     
 
 def adjust_bag(request, item_id):

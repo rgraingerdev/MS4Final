@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <h6><strong>{{ product.name }}</strong></h6>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <img class="thumbnail" src="{% static 'images/noimage.png' %}">
+                    </div>
+                    <div class="col-lg-6">
+                        <p>{{ product.description }}</p>
+                        <form method="post" action="{% url 'add_to_bag' product.id %}">
+                            {% csrf_token %}
+                            {{ form.quantity }}
+                            {{ produuct.price }}
+                            <button type="submit" class="btn btn-outline-secondary add-btn">Add To Cart</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}
