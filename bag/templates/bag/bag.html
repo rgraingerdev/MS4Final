@@ -42,6 +42,7 @@
                             </div>
                         </div>
                         <div style="flex:1"><p>{{ product.total_price }}</p></div>
+                        <a href="{% url 'remove_from_bag' product_id=product.product.id %}" class="btn btn-danger">Remove</a>
                     </div>
                 {% endfor %}
             </div>
