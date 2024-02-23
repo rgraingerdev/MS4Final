@@ -1,1 +1,1 @@
-web: gunicorn megashop.wsgi:application
+web: gunicorn megashop.wsgi
