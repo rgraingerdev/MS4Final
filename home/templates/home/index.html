@@ -22,9 +22,9 @@
                         <a href="{% url 'products' %}" class="shop-now-button btn btn-lg rounded-0 text-uppercase py-3">Shop Now</a>
                         {% if user.is_authenticated %}
                             <h1>Welcome to the thunderdome</h1>
-                            <a href="{% account_logout %}" class="btn btn-warning btn-lg rounded-0 text-uppercase py-3">Sign up</a>
+                            <a href="{% account/logout %}" class="btn btn-warning btn-lg rounded-0 text-uppercase py-3">Sign up</a>
                         {% else %}
-                            <a href="{% account_signup %}" class="btn btn-warning btn-lg rounded-0 text-uppercase py-3">Sign up</a>
+                            <a href="{% account/login %}" class="btn btn-warning btn-lg rounded-0 text-uppercase py-3">Sign up</a>
                         {% endif %}
                     </h4>
                 </div>
