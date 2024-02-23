@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect, HttpResponse, get_object_or_404, reverse
 from django.contrib.auth.decorators import login_required
-from django.http import HttpResponseBadRequest
+from django.http import HttpResponseBadRequest, JsonResponse
 from django.contrib import messages
 from .forms import AddToBagForm
 from .models import Bag
@@ -29,7 +29,7 @@ def add_to_bag(request, product_id):
     if request.method == 'POST':
         form = AddToBagForm(request.POST)
         if form.is_valid():
-            quantity = form.cleaned_data.get('quantity', 1)
+            quantity = int(request.POST.get('quantity', 1))
 
             bag_items = Bag.objects.filter(user=request.user, product=product)
 
@@ -60,3 +60,23 @@ def remove_from_bag(request, product_id):
         bag_item.delete()
         messages.success(request, 'item removed from bag')
         return redirect('view_bag')
+
+def update_quantity(request, product_id, direction):
+    try:
+        bag_item = Bag.objects.get(user=request.user, id=product_id)
+        current_quantity = bag_item.quantity
+
+        if direction == 'up':
+            new_quantity = current_quantity + 1
+        elif direction == 'down' and current_quantity > 1:
+            new_quantity = current_quantity - 1
+        else:
+            return JsonResponse({'error': 'Invalid direction or quantity'})
+        bag_item.quantity = new_quantity
+        bag_item.save()
+
+        return JsonResponse({'Success': 'Quantity updated successfully'})
+    except Bag.DoesNotExist:
+        return JsonResponse({'error': 'Bag does not exist'})
+    except Exception as e:
+        return JsonResponse({'error': str(e)})
