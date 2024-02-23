@@ -1,10 +1,8 @@
-![Megashop](assets/images/Cardiff_City_Fanpage.png)
-
 Welcome To the Megashop, The Megashop and everything it stands for are the focus of this website. You can Win prizes or dream holidays.
 
 ## Getting Started
 
-Visit "placeholder"on your preferred web browser to access the Developer friends Page. The website is completely responsive; regardless of whether you're using a desktop computer, tablet or smartphone, it should look excellent on all of them.
+Visit https://megashop-d3bc08f15f0a.herokuapp.com on your preferred web browser to access the Developer friends Page. The website is completely responsive; regardless of whether you're using a desktop computer, tablet or smartphone, it should look excellent on all of them.
 
 ## User Storys
 I have developed user stories to direct my design and development process; in order to make sure that the Developer friends Page satisfies the requirements of my users. Here are some usage examples for user stories:
@@ -34,16 +32,8 @@ By developing user stories, I can make sure that the website satisfies user need
 
 ### Font
 
-* Inter was the font I chose. The typeface was picked because it is slick and simple for the end user to read, additionally it comes from Google Fonts.
-* ![wireframe](project/static/images/font_inter.png)
+* Roboto was the font I chose. The typeface was picked because it is slick and simple for the end user to read, additionally it comes from Google Fonts.
 
-## Wireframes
-* I began my project with wireframing my design below:
-
-* ![wireframe](project/static/images/wireframe_home.png)
-* ![wireframe desktop](project/static/images/wireframe_contact.png)
-* ![wireframe desktop 2](project/static/images/wireframe_timeline.png)
-* ![wireframe desktop 3](project/static/images/wireframe_review.png)
 
 ## Technologies used
 * HTML - Was used for the structure of the page.
@@ -78,17 +68,9 @@ Testing began with automated testing as per the table below with screenshots.
 |-----|-----|-----|-----|
 |Home| Pass| Pass| Pass|
 |Products| Pass| Pass| Pass|
-|Add product| Pass| Pass| Pass|
-|Edit product| Pass| Pass| Pass|
 |Payment| Pass| Pass| Pass|
 |My Details| Pass| Pass| Pass|
 |Sign in| Pass | Pass| Pass|
-
-![Home](project/static/images/validator_home.png)  
-
-![Home](project/static/images/validator_timetable.png)  
-
-![Home](project/static/images/validator_signin.png)  
 
 ### Manual testing
 
@@ -98,47 +80,19 @@ Testing began with automated testing as per the table below with screenshots.
 |-----|-----|-----|-----|-----|
 |Enter button| To navigate to history page | clicked the enter button | Opened history page correctly | |
 |Nav links | When clicked navigate to page | Clicked all nav links on all pages| All pages opened as expected| Pass
-|Social link icons | Social link icons to open links in new tab| clicked social link icons| Link opened in new tab and on correct site| Pass|
 |Menu Drop down | To drop down on mobile and tablet devices | opened on mutiple devices and pressed button | menu droped and displayed correctly| Pass|
 
-#### Timetable
-
+### Store
 | Feature | Expect | Action | Result | Pass/Fail |
 |-----|-----|-----|-----|-----|
 |Nav links | When clicked navigate to page | Clicked all nav links on all pages| All pages opened as expected| Pass
 |Menu Drop down | To drop down on mobile and tablet devices | opened on mutiple devices and pressed button | menu droped and displayed correctly| Pass|
-|Social link icons | Social link icons to open links in new tab| clicked social link icons| Link opened in new tab and on correct site| Pass|
-|Contact form | To  submit for when inputs are filled | left form blank and attempted submit/filled form and submitted | prompted to fill input boxes/ submitted to input page| Pass|
-|Review Commit| when clicked submit information to table| tried to complete with no input will not allow attempted with input commited to postgres| Pass
-|Reviews link | when clicked navigate to page | Clicked on link | reviews pageopened | Pass
-
-### Reviews
-| Feature | Expect | Action | Result | Pass/Fail |
-|-----|-----|-----|-----|-----|
-|Nav links | When clicked navigate to page | Clicked all nav links on all pages| All pages opened as expected| Pass
-|Menu Drop down | To drop down on mobile and tablet devices | opened on mutiple devices and pressed button | menu droped and displayed correctly| Pass|
-|Social link icons | Social link icons to open links in new tab| clicked social link icons| Link opened in new tab and on correct site| Pass|
-|Displays reviews| Displaying reviews from proper tables| Displaying review_id and contents| pulled from correct table| Pass
-|Edit link| opens review editor| Clicked link | Navigated to review editor correctly | Pass
-|Delete link| Removes review | Clicked link | Removed review as expected | Pass
-
-#### Contact
-
-| Feature | Expect | Action | Result | Pass/Fail |
-|-----|-----|-----|-----|-----|
-|Nav links | When clicked navigate to page | Clicked all nav links on all pages| All pages opened as expected| Pass
-|Menu Drop down | To drop down on mobile and tablet devices | opened on mutiple devices and pressed button | menu droped and displayed correctly| Pass|
-|Social link icons | Social link icons to open links in new tab| clicked social link icons| Link opened in new tab and on correct site| Pass|
-|Input boxes| Not allow form submited blank| Attempted to submit with no information| prompted to fill in boxes| pass
-|Input form| Pass information to postgres| Filled in form and submitted| checked information been inputed on correct table| Pass
 
 #### Sign in
 
 | Feature | Expect | Action | Result | Pass/Fail |
 |-----|-----|-----|-----|-----|
 |Nav links | When clicked navigate to page | Clicked all nav links on all pages| All pages opened as expected| Pass
-|Menu Drop down | To drop down on mobile and tablet devices | opened on mutiple devices and pressed button | menu droped and displayed correctly| Pass|
-|Social link icons | Social link icons to open links in new tab| clicked social link icons| Link opened in new tab and on correct site| Pass|
 |Form submission| Does not allow sign in without sign up| input invalid credentials| did not allow sign in| Pass
 |Form submission| Allows sign in with correct credentials| Input valid credentials| Sign in successful| Pass
 
@@ -148,32 +102,16 @@ Testing began with automated testing as per the table below with screenshots.
 | Feature | Expect | Action | Result | Pass/Fail |
 |-----|-----|-----|-----|-----|
 |Nav links | When clicked navigate to page | Clicked all nav links on all pages| All pages opened as expected| Pass
-|Menu Drop down | To drop down on mobile and tablet devices | opened on mutiple devices and pressed button | menu droped and displayed correctly| Pass|
-|Social link icons | Social link icons to open links in new tab| clicked social link icons| Link opened in new tab and on correct site| Pass|
 |Form submission| Does not allow empty or invalid input| Input invalid informatian| did not allow sign up| Pass
 |Form submission| Allows sign up with proper information| Input correct information| Allowed sign up | Pass
 |Credential storage| Stores credentials in correct tables| Submitted input| Checked postgre table for information| Pass
 
 
-
 Continuing with testing, I tested the page across multiple devices (iPhone, Galaxy Fold, Edge and Firefox) ensuring all links and pages loaded all elements correctly and promptly.
-
-![iphone home](project/static/images/iphone_timetable.png)  
-
-
-![fold contact](project/static/images/galaxyfold.png) 
-
-![Fold open history](project/static/images/ipad.png)
-
 
 ### known bugs
 
 Bugs found during writing have been fixed. 
-* Not registering user signed in - Resolved by implementing Flask login manager
-* Not posting message to SQL table - Resolved recreated the SQL table to reflect fields
-* Footer not sticking to bottom of page - resolved by re-applying CSS
-* User no action on sign in invalid salt - added a decrypt into initial password encrypt
-* Unable to edit reviews no review_id - added review_id into function
 
 ## Local Development
 
@@ -236,14 +174,14 @@ To develop this repository locally, you will need to do the following:
 7. Click Deploy branch.
 
 ## Creating a fork
-1. Navigate to the [repository](https://github.com/rgraingerdev/MS3)
+1. Navigate to the [repository](https://github.com/rgraingerdev/MS4Final)
 2. In the top-right corner of the page click on the fork button and select create a fork.
 3. You can change the name of the fork and add description 
 4. Choose to copy only the main branch or all branches to the new fork. 
 5. Click Create a Fork. A repository should appear in your GitHub.
 
 ### Cloning Repository
-1. Navigate to the [repository](https://github.com/rgraingerdev/MS3)
+1. Navigate to the [repository](https://github.com/rgraingerdev/MS4Final)
 2. Click on the Code button on top of the repository and copy the link. 
 3. Open Git Bash and change the working directory to the location where you want the cloned directory. 
 4. Type git clone and then paste the link.
@@ -252,3 +190,5 @@ To develop this repository locally, you will need to do the following:
 ## Acknowledgements
 * Thank you to my mentor for supporting me through this project
 * Everybody on slack for answering any questions I had along the way.
+* Project structure from Boutiqe ado project
+* Models from boutique ado
