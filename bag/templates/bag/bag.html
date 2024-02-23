@@ -18,7 +18,7 @@
                     </tr>
                     <tr>
                         {% for product in bag_items %}
-                        <div class="bag-row d-flex justify-content-between align-items-center">
+                        <div class="bag-row d-flex justify-content-between align-items-center" style="padding-bottom: 10px;">
                             <div style="flex-grow-2">
                                 <img class="row-image" src="{% static 'images/noimage.png' %}">
                             </div>
@@ -31,7 +31,7 @@
                             <div style="flex-grow-1">
                                 <p class="quantity">{{ product.quantity }}</p>
                             </div>
-                            <div style="flex-grow-1"><p>{{ product.total_price }}</p></div>
+                            <div style="flex-grow-1; margin-bottom: 10px;"><p>{{ product.total_price }}</p></div>
                             <a href="{% url 'remove_from_bag' product_id=product.id %}" class="btn btn-danger">Remove</a>
                         </div>
                     {% endfor %}
