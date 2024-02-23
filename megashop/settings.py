@@ -24,7 +24,7 @@ SECRET_KEY = "django-insecure-=e138*vz#30p5lzhn&-d_(b6nr_$v^49=trsbh9a(y6%49t+)0
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://megashop-d3bc08f15f0a.herokuapp.com/']
+ALLOWED_HOSTS = ['https://megashop-d3bc08f15f0a.herokuapp.com/', 'localhost/']
 
 
 # Application definition
@@ -58,8 +58,6 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
-    "allauth.account.middleware.AccountMiddleware",
-    "allauth.account.middleware.AuthenticationMiddleware",
     "whitenoise.middleware.WhiteNoiseMiddleware",
     
 ]
