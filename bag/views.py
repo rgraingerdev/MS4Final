@@ -1,5 +1,6 @@
-from django.shortcuts import render, redirect, HttpResponse, get_object_or_404
+from django.shortcuts import render, redirect, HttpResponse, get_object_or_404, reverse
 from django.contrib.auth.decorators import login_required
+from django.http import HttpResponseBadRequest
 from django.contrib import messages
 from .forms import AddToBagForm
 from .models import Bag
@@ -54,9 +55,8 @@ def add_to_bag(request, product_id):
 
 
 def remove_from_bag(request, product_id):
-    user = request.user
-    product = get_object_or_404(Bag, user=user, id=product_id)
-    product.delete()
-    messages.success(request, 'Item removed from basket')
-    return redirect('bag')
-    
+
+        bag_item = Bag.objects.get(user=request.user, id=product_id)
+        bag_item.delete()
+        messages.success(request, 'item removed from bag')
+        return redirect('view_bag')
