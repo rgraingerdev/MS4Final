@@ -10,13 +10,13 @@
                 <br>
                 <table class="table">
                     <tr>
-                        <th><h5>Items: <strong>{{ bag_items_count }}</strong></h5></th>
-                        <th><h5>Total: <strong>£{{ bag_total }}</strong></h5></th>
+                        <th>Items: <strong>{{ bag_items_count }}</strong></th>
+                        <th>Total: <strong>£{{ bag_total }}</strong></th>
                         <th>
                             <a style="float:right; margin: 5px;" class="btn btn-success" href="{% url 'checkout' %}">Checkout</a>
                         </th>
                     </tr>
-                    <tr>
+                    <tbody>
                         {% for product in bag_items %}
                         <div class="bag-row d-flex justify-content-between align-items-center" style="padding-bottom: 10px;">
                             <div style="flex-grow-2">
@@ -35,7 +35,7 @@
                             <a href="{% url 'remove_from_bag' product_id=product.id %}" class="btn btn-danger">Remove</a>
                         </div>
                     {% endfor %}
-                    </tr>
+                    </tbody>
                 </table>
             </div>
             <br>
