@@ -1,9 +1,9 @@
+# urls.py
 from django.urls import path
 from . import views
-from .webhooks import webhook
 
 urlpatterns = [
-    path('', views.checkout, name='checkout'),
-    path('checkout/checkout_success/', views.checkout_success, name='checkout_success'),
-    path('wh/', webhook, name='webhook'),
+
+    path('payment/', views.payment, name='payment'),
+    path('process_payment/<str:client_secret>/', views.process_payment, name='process_payment'),
 ]

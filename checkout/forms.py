@@ -1,15 +1,11 @@
 from django import forms
+from .models import Payment
 
-class PaymentForm(forms.Form):
-    stripe_payment_method = forms.CharField(
-        required = True, widget = forms.HiddenInput()
-)
-    card_number = forms.CharField(label = 'Card Number', required = True)
-    exp_month = forms.CharField(label = 'Expiry Month', required = True)
-    exp_year = forms.CharField(label = 'Expiry Year', required = True)
-    cvc = forms.IntegerField(label = 'CVC', required = True)
-
-
-    def clean_stripe_payment_method(self):
-        stripe_payment_method = self.cleaned_data.get('stripe_payment_method')
-        return stripe_payment_method
+class PaymentForm(forms.ModelForm):
+    class Meta:
+        model = Payment
+        fields = ('amount', 'description',)
+        widgets = {
+            'amount': forms.NumberInput(attrs={'class': 'form-control'}),
+            'description': forms.TextInput(attrs={'class': 'form-control'}),
+        }

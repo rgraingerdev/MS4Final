@@ -3,6 +3,7 @@ import uuid
 from django.db import models
 from django.db.models import Sum
 from django.conf import settings
+from djstripe.models import StripeModel
 
 from django_countries.fields import CountryField
 
@@ -115,3 +116,13 @@ class OrderLineItem(models.Model):
 
     def __str__(self):
         return f'SKU {self.product.sku} on order {self.order.order_number}'
+    
+
+class Payment(StripeModel):
+    amount = models.DecimalField(max_digits=10, decimal_places=2)
+    description = models.CharField(max_length=100)
+    paid = models.BooleanField(default=False)
+    user = models.ForeignKey(UserProfile, on_delete=models.CASCADE)
+    
+    def __str__(self):
+        return f'{self.user.username} - {self.description}'

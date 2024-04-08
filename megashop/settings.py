@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     "checkout",
     "profiles",
     "crispy_forms",
+    "djstripe",
     
 
 ]
@@ -190,7 +191,10 @@ STANDARD_DELIVERY_PERCENTAGE = 10
 STRIPE_CURRENCY = 'usd'
 STRIPE_PUBLIC_KEY = 'sk_test_51OlWc4HBL7jJNBrfijU91BBY1BfqI2PJBFCnkHVQ6NAz97uWq5HiXFMFjH4l0sGAzP0qhvGB5hZ4h9mDv9dUOKqS00vLMH5ZZ9'
 STRIPE_SECRET_KEY = 'sk_test_51OlWc4HBL7jJNBrfijU91BBY1BfqI2PJBFCnkHVQ6NAz97uWq5HiXFMFjH4l0sGAzP0qhvGB5hZ4h9mDv9dUOKqS00vLMH5ZZ9'
-STRIPE_WH_SECRET = os.getenv('STRIPE_WH_SECRET', '')
+STRIPE_WH_SECRET = os.getenv('whsec_p5Q99Gw6ich9wRk98roQvTmAyTkqU7hy', '')
+
+DJSTRIPE_WEBHOOK_SECRET = 'whsec_p5Q99Gw6ich9wRk98roQvTmAyTkqU7hy'
+DJSTRIPE_USE_NATIVE_JSONFIELD = True
 
 if 'DEVELOPMENT' in os.environ:
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
