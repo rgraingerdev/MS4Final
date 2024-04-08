@@ -9,6 +9,7 @@ from .models import Product, Category
 
 # Create your views here.
 
+
 def product_list(request):
     categories = Category.objects.all()
     products = Product.objects.all()
@@ -28,6 +29,6 @@ def product_list(request):
     context = {
         'categories': categories,
         'products': products
-    }
+}
 
     return render(request, 'products/products.html', context)

@@ -11,7 +11,9 @@ class ProductForm(forms.ModelForm):
         model = Product
         fields = '__all__'
 
-    image = forms.ImageField(label='image', required=False, widget=CustomClearableFileInput)
+    image = forms.ImageField(
+        label = 'image', required = False, widget = CustomClearableFileInput)
+
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -31,7 +33,7 @@ class ProductForm(forms.ModelForm):
             'category',
             'price',
             'image',
-            Submit('submit', 'Submit', css_class='btn btn-primary')
+            Submit('submit', 'Submit', css_class = 'btn btn-primary')
         )
 
         for field_name, field in self.fields.items():
